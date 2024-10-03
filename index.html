@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+</head>    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptación Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h2>Encriptador/Desencriptador AES</h2>
+    </header>
+    <main>
+        <section>
+            <label for="message">Mensaje:</label>
+            <textarea id="message" rows="4" cols="50"></textarea>
+        </section>
+        <section>
+            <label for="key">Clave:</label>
+            <input type="password" id="key">
+        </section>
+        <section>
+            <label for="destinatario">Correo electrónico:</label>
+            <input type="email" id="destinatario">
+        </section>
+        <section>
+            <button onclick="encryptMessage()">Encriptar</button>
+            <button onclick="decryptMessage()">Desencriptar</button>
+        </section>
+        <section>
+            <h3>Resultado:</h3>
+            <textarea id="result" rows="4" cols="50" readonly></textarea>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="encryption.js"></script>
+</body>
+</html>
